@@ -1,0 +1,27 @@
+services:
+  frontend:
+    container_name: medium
+    image: medium
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/app:cached
+      - medium-node-modules:/app/node_modules
+      - medium-next-cache:/app/.next
+    working_dir: /app
+    environment:
+      - HUSKY=1
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+
+volumes:
+  medium-node-modules:
+    name: medium-node-modules
+  medium-next-cache:
+    name: medium-next-cache
