@@ -6,7 +6,7 @@ import localFont from 'next/font/local';
 import { NextPage } from 'next/types';
 import type { ReactElement, ReactNode } from 'react';
 
-export type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
+type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
 	getLayout?: (page: ReactElement) => ReactNode;
 };
 
