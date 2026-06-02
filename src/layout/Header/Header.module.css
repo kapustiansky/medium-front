@@ -4,11 +4,10 @@
 	z-index: 100;
 	background: var(--neutral-900);
 	box-shadow: var(--shadow);
+	padding: 18px 0;
 }
 
 .container {
-	padding-top: 18px;
-	padding-bottom: 18px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

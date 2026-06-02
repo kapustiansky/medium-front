@@ -1,0 +1,26 @@
+.input {
+	width: 100%;
+	min-height: 40px;
+	padding: 4px 14px;
+	border-radius: 10px;
+	border: none;
+	outline: 2px solid var(--neutral-200);
+	background: var(--neutral-0);
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1;
+	color: var(--neutral-900);
+	transition: outline var(--base-transition);
+
+	&::placeholder {
+		color: var(--neutral-400);
+	}
+
+	&:focus:not(.error) {
+		outline: 2px solid var(--violet-500);
+	}
+}
+
+.error {
+	outline: 2px solid var(--coral-500);
+}

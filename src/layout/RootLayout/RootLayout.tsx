@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 interface IRootLayoutProps {
@@ -24,7 +25,7 @@ const RootLayout = ({ children, meta }: IRootLayoutProps) => {
 
 			<Header />
 			<main>{children}</main>
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 };
